@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <div class="name-inputs">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="text" id="emailOrMobile" class="name-input" placeholder="Mobile number or email address" required>
+                <input type="password" id="password" class="name-input" placeholder="New password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Date of birth:</label>
+                <div class="date-inputs">
+                    <select id="day" class="name-input" required>
+                        <option value="" disabled selected>Day</option>
+                    </select>
+                    <select id="month" class="name-input" required>
+                        <option value="" disabled selected>Month</option>
+                    </select>
+                    <select id="year" class="name-input" required>
+                        <option value="" disabled selected>Year</option>
+                    </select>
+                </div>
+            </div>
+            
+            <label>Gender:</label><br>
+
+            <div class="gender">   
+                <div class="radio-container">
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female" class="radio-label">Female</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male" class="radio-label">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="custom" name="gender" value="custom" required>
+                        <label for="custom" class="radio-label">Custom</label>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
